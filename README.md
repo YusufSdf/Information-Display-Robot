@@ -1,30 +1,30 @@
 # 📊 Information Display Robot
 
-Bu proje, yüklediğiniz CSV dosyasındaki verileri **görsel (scatter plot)** ya da **tablolu (dataframe)** şekilde görüntülemenizi sağlayan basit ve kullanışlı bir Streamlit uygulamasıdır.
+This project is a simple and useful Streamlit application that allows you to view data from your uploaded CSV file in a **visual (scatter plot)** or **tabular (dataframe)** format.
 
 ---
 
-## 🚀 Özellikler
+## 🚀 Features
 
-- Kullanıcıdan CSV dosyası alır
-- Dosyadaki sütunları seçerek:
-  - Scatter plot (dağılım grafiği) oluşturur
-  - Seçilen sütunları tablo halinde gösterir
-- Streamlit ile modern ve interaktif arayüz
-
----
-
-## 🧠 Kullanım Senaryoları
-
-- Veri görselleştirme pratiği yapmak
-- Küçük veri setlerini hızlı analiz etmek
-- CSV dosyalarındaki belirli sütunları karşılaştırmak
+-   Accepts CSV files from the user.
+-   By selecting columns from the file:
+    -   Generates a scatter plot.
+    -   Displays the selected columns in a table.
+-   Modern and interactive interface with Streamlit.
 
 ---
 
-## 🔧 Kurulum ve Çalıştırma
+## 🧠 Usage Scenarios
 
-### 1. Gerekli Kütüphaneler
+-   Practicing data visualization.
+-   Quickly analyzing small datasets.
+-   Comparing specific columns in CSV files.
+
+---
+
+## 🔧 Setup and Running
+
+### 1. Required Libraries
 
 ```bash
 pip install streamlit pandas matplotlib

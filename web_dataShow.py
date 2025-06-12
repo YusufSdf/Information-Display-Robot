@@ -9,9 +9,8 @@ try:
     st.markdown("#It will display the information you enter as an image or dataframe(.csv or .json).")
 
     upload = st.file_uploader("upload file for data")
-    file_ext = os.path.splitext(upload)
-    file_ext = file_ext.lower()
-    
+    file_ext = os.path.splitext(upload.name).lower()
+        
     if file_ext == ".csv":
         data = pd.read_csv(upload,encoding="utf-8")
     elif file_ext == ".json":

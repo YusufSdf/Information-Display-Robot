@@ -2,13 +2,20 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import streamlit as st
+import os
 
 try:
     st.title("Information Display Robot")
-    st.markdown("#It will display the information you enter as an image or dataframe.")
+    st.markdown("#It will display the information you enter as an image or dataframe(.csv or .json).")
 
     upload = st.file_uploader("upload file for data")
-    data = pd.read_csv(upload,encoding="latin-1")
+    file_ext = os.path.splitext(upload)
+    file_ext = file_ext.lower()
+    
+    if file_ext == ".csv":
+        data = pd.read_csv(upload,encoding="utf-8")
+    elif file_ext == ".json":
+        data = pd.read_json(upload,encoding="utf-8")
 
     vote = st.selectbox("select mod",["Picture","Dataset"])
 

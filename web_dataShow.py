@@ -20,7 +20,7 @@ try:
             data = pd.read_json(upload,encoding="utf-8")
 
         vote = st.selectbox("select mod",["Picture","Dataset"])
-
+        st.write("yep")
         def columns_create():
             columns = [] 
             for i in data.columns:

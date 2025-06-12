@@ -8,7 +8,14 @@ try:
     st.markdown("#It will display the information you enter as an image or dataframe.")
 
     upload = st.file_uploader("upload file for data")
-    data = pd.read_csv(upload,encoding="latin-1")
+    encodings = ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252', 'windows-1254']
+    for enc in encodings:
+        try:
+            upload.seek(0) # Dosya işaretçisini başa al, tekrar okuma yaparken önemli!
+            data = pd.read_csv(upload, encoding=enc)
+            break 
+        except UnicodeDecodeError:
+            pass
 
     vote = st.selectbox("select mod",["Picture","Dataset"])
 

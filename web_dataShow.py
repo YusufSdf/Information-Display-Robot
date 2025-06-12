@@ -18,9 +18,11 @@ try:
             data = pd.read_csv(upload,encoding="utf-8")
         elif file_ext == ".json":
             data = pd.read_json(upload,encoding="utf-8")
+        else:
+            st.write("yep")
 
         vote = st.selectbox("select mod",["Picture","Dataset"])
-        st.write("yep")
+
         def columns_create():
             columns = [] 
             for i in data.columns:

@@ -14,9 +14,9 @@ try:
         st.write(file_ext)
 
         if file_ext == ".csv":
-            data = pd.read_csv(upload,encoding="utf-8")
+            data = pd.read_csv(upload,encoding="latin-1")
         elif file_ext == ".json":
-            data = pd.read_json(upload,encoding="utf-8")
+            data = pd.read_json(upload,encoding="latin-1")
         else:
             st.write("yep")
 

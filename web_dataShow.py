@@ -12,6 +12,7 @@ try:
     if upload is not None:
         file_ext = os.path.splitext(upload.name)[1].lower()
         data = None
+        st.write(file_ext)
 
         if file_ext == ".csv":
             data = pd.read_csv(upload,encoding="utf-8")

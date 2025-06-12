@@ -5,9 +5,9 @@ import streamlit as st
 
 try:
     st.title("Information Display Robot")
-    st.markdown("#It will display the information you enter as an image or dataframe.")
+    st.markdown("#It will display the information you enter as an image or dataframe(.csv).")
 
-    upload = st.file_uploader("upload file for data")
+    upload = st.file_uploader("upload file for data(.csv)")
     encodings = ['utf-8', 'latin-1', 'iso-8859-1', 'cp1252', 'windows-1254']
     for enc in encodings:
         try:
